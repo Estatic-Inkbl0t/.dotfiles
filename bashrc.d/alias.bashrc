@@ -22,3 +22,6 @@ alias fgrep='grep -F --color=auto'
 alias egrep='grep -E --color=auto'
 alias hw='hwinfo --short'
 alias ip='ip -color'
+
+# Find files for today
+alias f2day='find . -type f -mtime 0 -exec ls -l {} +'
