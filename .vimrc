@@ -6,6 +6,9 @@ set scrolloff=8
 " Set Make to compile correctly in Vi
 set makeprg=make\ %:r.o
 
+" YAML editing
+autocmd FileType yaml setlocal ai ts=2 sw=2 et nu cuc
+
 " Smart tabbing / autoindenting
 set undolevels=100
 set nocompatible
