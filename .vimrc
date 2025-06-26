@@ -1,77 +1,92 @@
-" Pressing Ctrl-N twice in normal mode, Vim toggles between
-" showing and hiding line numbers.
-nmap <C-N><C-N> :set invnumber invrelativenumber<CR>
-set scrolloff=8
+" UI improvements
+au VimEnter * set laststatus=2
+set cmdheight=2
+set ruler
+set visualbell
+set background=dark
+set showcmd
+" Set updatetime to 50ms from default 4000 ms
+set updatetime=50
+" Disable Q Ex mode
+nnoremap Q <Nop>
+syntax on
 
-" Set Make to compile correctly in Vi
-set makeprg=make\ %:r.o
+" History
+set history=100
+set undolevels=100
+
+" Toggle paste/nopaste
+map zp :set paste! paste?<CR>
+
+" Extend the command time from default 1 second (1000 ms) to 2 seconds
+set timeoutlen=2000
+
+" Use comma as the leader key
+let mapleader = ","
+
+" Vertical Split
+nnoremap <leader>v <C-w>v
+
+" Horizontal Split
+nnoremap <leader>s <C-w>s
+
+" Move to the previous windows hjkl
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <c-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+
+" Quit the window
+nnoremap <leader>q <C-w>q
+
+" show and hide line numbers
+nnoremap <leader>n :set invnumber invrelativenumber<CR>
+set scrolloff=8
 
 " YAML editing
 autocmd FileType yaml setlocal ai ts=2 sw=2 et nu cuc
 
-" Smart tabbing / autoindenting
-set undolevels=100
-set nocompatible
-set autoindent
-set smarttab
+"""""""""""""""""
+" misc settings
+"""""""""""""""""
 
-" Allow backspace to back over lines
-set backspace=2
-set exrc
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-set cino=t0
-set cindent shiftwidth=2
+" Disable macro
+nnoremap q <Nop>
 
-" This changes the status bar highlight slightly from the default
-"set highlight=8b,db,es,mb,Mn,nu,rs,ss,tb,vr,ws
-
-" Quite
-set visualbell
-
-" Give some room for errors
-set cmdheight=2
-
-" always show a status line
-au VimEnter * set laststatus=2
-
-" Show the line and column number of the cursor position
-set ruler
-
-" Use a viminfo file
-set viminfo='20,\"50
+" Enable true color
+"if exists('+termguicolors')
+"  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"  set termguicolors
+"endif
 
 " Always limit the width of text to 80 chars
 "set textwidth=80
-
-" Keep a history
-set history=100
-
-" Toggle paste/nopaste
-map zp :set paste! paste?<CR>
 
 " Switch off search pattern highlighting
 set nohlsearch
 set incsearch
 
-" Switch on syntax highlighting.
-syntax on
+" Use a viminfo file (google to find the best numbers)
+"set viminfo='1000,\"1000
 
-" Set background to dark to make colors pop
-set background=dark
+" Always limit the width of text to 80 chars
+"set textwidth=80
 
-" Enable true color
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
+" Smart tabbing / autoindenting
+"set nocompatible
+"set autoindent
+"set smarttab
 
-set updatetime=50
+" Allow backspace to back over lines
+"set backspace=2
+"set exrc
+"set expandtab
+"set shiftwidth=4
+"set softtabstop=4
+"set tabstop=4
+"set cino=t0
+"set cindent shiftwidth=2
 
-" Disable Q Ex mode
-nnoremap Q <Nop>
-" Disable macro
-nnoremap q <Nop>
+" Set Make to compile correctly in Vi
+set makeprg=make\ %:r.o
