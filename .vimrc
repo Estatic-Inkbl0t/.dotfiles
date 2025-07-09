@@ -5,11 +5,16 @@ set ruler
 set visualbell
 set background=dark
 set showcmd
+
 " Set updatetime to 50ms from default 4000 ms
 set updatetime=50
+
 " Disable Q Ex mode
 nnoremap Q <Nop>
 syntax on
+
+" Enable filetype detection, plugins, and indenting
+filetype plugin indent on
 
 " History
 set history=100
@@ -32,61 +37,48 @@ nnoremap <leader>s <C-w>s
 
 " Move to the previous windows hjkl
 nnoremap <leader>h <C-w>h
-nnoremap <leader>j <c-w>j
+nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
 
 " Quit the window
 nnoremap <leader>q <C-w>q
 
-" show and hide line numbers
+" Show and hide line numbers
 nnoremap <leader>n :set invnumber invrelativenumber<CR>
 set scrolloff=8
 
 " YAML editing
 autocmd FileType yaml setlocal ai ts=2 sw=2 et nu cuc
 
-"""""""""""""""""
-" misc settings
-"""""""""""""""""
+"──────────────────────────────────────────────────────────────────────────────
+" General indenting: use spaces (not tabs), 4-space steps, auto-indent
+"──────────────────────────────────────────────────────────────────────────────
+set expandtab        " use spaces instead of tabs
+set shiftwidth=4     " indent/outdent by 4 spaces for << >> commands
+set softtabstop=4    " make Tab/Backspace insert/delete up to 4 spaces
+set tabstop=4        " a real <Tab> equals 4 spaces when editing
+set autoindent       " new line inherits indent from previous
 
-" Disable macro
+" Python override (in case you change globals later)
+autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4 autoindent
+
+"──────────────────────────────────────────────────────────────────────────────
+" Misc settings
+"──────────────────────────────────────────────────────────────────────────────
+" Disable macro recording with 'q'
 nnoremap q <Nop>
 
-" Enable true color
-"if exists('+termguicolors')
-"  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-"  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-"  set termguicolors
-"endif
+" (Optional true-color support—uncomment if your terminal supports it)
+" if exists('+termguicolors')
+"   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"   set termguicolors
+" endif
 
-" Always limit the width of text to 80 chars
-"set textwidth=80
-
-" Switch off search pattern highlighting
+" Switch off search highlighting by default, but keep incremental search
 set nohlsearch
 set incsearch
-
-" Use a viminfo file (google to find the best numbers)
-"set viminfo='1000,\"1000
-
-" Always limit the width of text to 80 chars
-"set textwidth=80
-
-" Smart tabbing / autoindenting
-"set nocompatible
-"set autoindent
-"set smarttab
-
-" Allow backspace to back over lines
-"set backspace=2
-"set exrc
-"set expandtab
-"set shiftwidth=4
-"set softtabstop=4
-"set tabstop=4
-"set cino=t0
-"set cindent shiftwidth=2
 
 " Set Make to compile correctly in Vi
 set makeprg=make\ %:r.o
