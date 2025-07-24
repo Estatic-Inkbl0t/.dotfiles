@@ -48,9 +48,6 @@ nnoremap <leader>q <C-w>q
 nnoremap <leader>n :set invnumber invrelativenumber<CR>
 set scrolloff=8
 
-" YAML editing
-autocmd FileType yaml setlocal ai ts=2 sw=2 et nu cuc
-
 "──────────────────────────────────────────────────────────────────────────────
 " General indenting: use spaces (not tabs), 4-space steps, auto-indent
 "──────────────────────────────────────────────────────────────────────────────
@@ -62,6 +59,9 @@ set autoindent       " new line inherits indent from previous
 
 " Python override (in case you change globals later)
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4 autoindent
+
+" YAML editing
+autocmd FileType yaml setlocal ai ts=2 sw=2 et nu cuc
 
 "──────────────────────────────────────────────────────────────────────────────
 " Misc settings
