@@ -58,7 +58,7 @@ set tabstop=4        " a real <Tab> equals 4 spaces when editing
 set autoindent       " new line inherits indent from previous
 
 " Python override (in case you change globals later)
-autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4 autoindent
+autocmd FileType python setlocal ai ts=4 sw=4 et sts=4 nu cuc
 
 " YAML editing
 autocmd FileType yaml setlocal ai ts=2 sw=2 et nu cuc
