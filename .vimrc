@@ -5,6 +5,8 @@ set ruler
 set visualbell
 set background=dark
 set showcmd
+set colorcolumn=80
+highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 " Set updatetime to 50ms from default 4000 ms
 set updatetime=50
@@ -68,13 +70,6 @@ autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4 
 "──────────────────────────────────────────────────────────────────────────────
 " Disable macro recording with 'q'
 nnoremap q <Nop>
-
-" (Optional true-color support—uncomment if your terminal supports it)
-" if exists('+termguicolors')
-"   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-"   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-"   set termguicolors
-" endif
 
 " Switch off search highlighting by default, but keep incremental search
 set nohlsearch
