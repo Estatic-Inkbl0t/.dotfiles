@@ -50,20 +50,22 @@ nnoremap <leader>q <C-w>q
 nnoremap <leader>n :set invnumber invrelativenumber<CR>
 set scrolloff=8
 
-" YAML editing
-autocmd FileType yaml setlocal ai ts=2 sw=2 et nu cuc
-
 "──────────────────────────────────────────────────────────────────────────────
 " General indenting: use spaces (not tabs), 4-space steps, auto-indent
+" ai=autoindent, ts=tabstop, sw=shiftwidth, et=expandtab                        
+" sts=softtabstop, nu=number, cuc=cursorcolumn, cul=cursorline
 "──────────────────────────────────────────────────────────────────────────────
-set expandtab        " use spaces instead of tabs
-set shiftwidth=4     " indent/outdent by 4 spaces for << >> commands
-set softtabstop=4    " make Tab/Backspace insert/delete up to 4 spaces
-set tabstop=4        " a real <Tab> equals 4 spaces when editing
-set autoindent       " new line inherits indent from previous
+set autoindent       " new line inherits indent from previous                   
+set tabstop=4        " a real <Tab> equals 4 spaces when editing                
+set shiftwidth=4     " indent/outdent by 4 spaces for << >> commands            
+set expandtab        " use spaces instead of tabs                               
+set softtabstop=4    " make Tab/Backspace insert/delete up to 4 spaces          
+
+" YAML override
+autocmd FileType yaml setlocal ai ts=2 sw=2 et cuc
 
 " Python override (in case you change globals later)
-autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4 autoindent
+autocmd FileType python setlocal ai ts=4 sw=4 et sts=4
 
 "──────────────────────────────────────────────────────────────────────────────
 " Misc settings
