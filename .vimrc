@@ -47,7 +47,7 @@ nnoremap <leader>l <C-w>l
 nnoremap <leader>q <C-w>q
 
 " Show and hide line numbers
-nnoremap <leader>n :set invnumber inrelativenumber<CR>
+nnoremap <leader>n :set invnumber invrelativenumber<CR>
 set scrolloff=8
 
 "-----------------------------------------------------------------------
