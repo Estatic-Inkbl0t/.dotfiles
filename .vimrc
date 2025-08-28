@@ -79,3 +79,13 @@ set incsearch
 
 " Set Make to compile correctly in Vi
 set makeprg=make\ %:r.o
+
+" Set background to dark to make colors pop
+set background=dark
+
+" Enable true color
+"if exists('+termguicolors')
+"  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"  set termguicolors
+"endif
