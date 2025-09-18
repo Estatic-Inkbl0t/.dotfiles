@@ -6,7 +6,7 @@ set visualbell
 set background=dark
 set showcmd
 set colorcolumn=80
-highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+highlight ColorColumn ctermbg=160 guibg=#d7000
 
 " Set updatetime to 50ms from default 4000 ms
 set updatetime=50
