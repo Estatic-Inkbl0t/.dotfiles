@@ -13,7 +13,7 @@ alias wget='wget -c '
 alias grep='grep --color=auto'
 alias fgrep='grep -F --color=auto'
 alias egrep='grep -E --color=auto'
-alias ip='ip --color '
+alias ip='ip --color'
 
 # Find files for today
 alias f2day='find . -type f -mtime 0 -exec ls -l {} +'
