@@ -23,5 +23,4 @@ if [ -d ~/.config/bashrc.d ]; then
         fi
     done
 fi
-
 unset rc
