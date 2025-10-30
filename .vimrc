@@ -60,7 +60,6 @@ set shiftwidth=4     " indent/outdent by 4 spaces for << >> commands
 set expandtab        " use spaces instead of tabs
 set softtabstop=4    " make Tab/Backspace insert/delete up to 4 spaces
 set autoindent       " new line inherits indent from previous
-set smartindent      " more intelligent auto-indent for C-like languages 
 
 " YAML override
 autocmd FileType yaml setlocal ai ts=2 sw=2 et cuc
