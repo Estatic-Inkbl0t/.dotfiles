@@ -52,14 +52,15 @@ set scrolloff=8
 
 "──────────────────────────────────────────────────────────────────────────────
 " General indenting: use spaces (not tabs), 4-space steps, auto-indent
-" ai=autoindent, ts=tabstop, sw=shiftwidth, et=expandtab                        
+" ai=autoindent, ts=tabstop, sw=shiftwidth, et=expandtab
 " sts=softtabstop, nu=number, cuc=cursorcolumn, cul=cursorline
 "──────────────────────────────────────────────────────────────────────────────
-set autoindent       " new line inherits indent from previous                   
-set tabstop=4        " a real <Tab> equals 4 spaces when editing                
-set shiftwidth=4     " indent/outdent by 4 spaces for << >> commands            
-set expandtab        " use spaces instead of tabs                               
-set softtabstop=4    " make Tab/Backspace insert/delete up to 4 spaces          
+set tabstop=4        " a real <Tab> equals 4 spaces when editing
+set shiftwidth=4     " indent/outdent by 4 spaces for << >> commands
+set expandtab        " use spaces instead of tabs
+set softtabstop=4    " make Tab/Backspace insert/delete up to 4 spaces
+set autoindent       " new line inherits indent from previous
+set smartindent      " more intelligent auto-indent for C-like languages 
 
 " YAML override
 autocmd FileType yaml setlocal ai ts=2 sw=2 et cuc
