@@ -1,6 +1,22 @@
 # .dotfiles
 dotfiles. What else would they be?
 
+## Prerequisites
+
+### Install stow if not present
+
+`sudo dnf install stow`
+
+### Install starship
+`curl -sS https://starship.rs/install.sh | sh`
+
+### Clone and stow
+```
+git clone https://github.com/Estatic-Inkbl0t/.dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+stow bash starship vim tmux
+```
+
 ## For CIS-aligned hardening
 
 To comply with following evaluations for `/home/*`, `/etc/skel/*`, and `/root/*`.
