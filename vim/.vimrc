@@ -62,7 +62,7 @@ set softtabstop=4    " make Tab/Backspace insert/delete up to 4 spaces
 set autoindent       " new line inherits indent from previous
 
 " YAML override
-autocmd FileType yaml setlocal ai ts=2 sw=2 et cuc
+autocmd FileType yaml setlocal ai ts=2 sw=2 et cuc cul
 
 " Python override (in case you change globals later)
 autocmd FileType python setlocal ai ts=4 sw=4 et sts=4
