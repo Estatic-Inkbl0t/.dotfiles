@@ -14,6 +14,7 @@ path_prepend() {
 path_prepend "$HOME/.local/bin"
 path_prepend "$HOME/bin"
 path_prepend "/opt/emacs-30.2/bin"
+path_prepend "$HOME/.config/emacs/bin"
 
 export PATH
 
