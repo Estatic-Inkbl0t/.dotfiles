@@ -1,3 +1,6 @@
+# Prevent accidental overwrite
+alias cp='cp -i'
+
 # dig short for a, ns, and mx records
 alias diga='dig +short a'
 alias digns='dig +short ns'
